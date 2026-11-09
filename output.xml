@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.14.10 on darwin)" generated="2026-11-09T17:02:40.591289" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5.1 (Python 3.14.10 on darwin)" generated="2026-11-09T17:05:41.915251" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="/Users/andres.aarnela/Desktop/webcounter/src/tests">
 <suite id="s1-s1" name="Increment" source="/Users/andres.aarnela/Desktop/webcounter/src/tests/increment.robot">
 <kw name="Open And Configure Browser" owner="resource" type="SETUP">
@@ -11,9 +11,9 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:40.693520" elapsed="0.000254"/>
+<status status="NOT RUN" start="2026-11-09T17:05:42.039978" elapsed="0.000226"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:40.693221" elapsed="0.000602"/>
+<status status="PASS" start="2026-11-09T17:05:42.039662" elapsed="0.000589"/>
 </branch>
 <branch type="ELSE">
 <kw name="New Browser" owner="Browser">
@@ -23,26 +23,40 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:40.693957" elapsed="0.000170"/>
+<status status="NOT RUN" start="2026-11-09T17:05:42.040385" elapsed="0.000161"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:40.693851" elapsed="0.000306"/>
+<status status="PASS" start="2026-11-09T17:05:42.040279" elapsed="0.000297"/>
 </branch>
-<status status="PASS" start="2026-11-09T17:02:40.693205" elapsed="0.000970"/>
+<status status="PASS" start="2026-11-09T17:05:42.039644" elapsed="0.000950"/>
 </if>
 <kw name="New Context" owner="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:40.694309" elapsed="0.000120"/>
+<status status="NOT RUN" start="2026-11-09T17:05:42.040743" elapsed="0.000120"/>
 </kw>
 <kw name="New Page" owner="Browser">
 <arg>about:blank</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:40.694497" elapsed="0.000206"/>
+<status status="NOT RUN" start="2026-11-09T17:05:42.040928" elapsed="0.000113"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:40.693103" elapsed="0.001653"/>
+<kw name="Go To" owner="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:42.041096" elapsed="0.000106"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>button &gt;&gt; text=Nollaa</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:42.041257" elapsed="0.000107"/>
+</kw>
+<status status="PASS" start="2026-11-09T17:05:42.039524" elapsed="0.001867"/>
 </kw>
 <test id="s1-s1-t1" name="At start the counter is zero" line="7">
 <kw name="Go To" owner="Browser">
@@ -50,7 +64,7 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:40.695030" elapsed="0.000177"/>
+<status status="NOT RUN" start="2026-11-09T17:05:42.041617" elapsed="0.000123"/>
 </kw>
 <kw name="Get Title" owner="Browser">
 <arg>==</arg>
@@ -59,7 +73,7 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:40.695276" elapsed="0.000146"/>
+<status status="NOT RUN" start="2026-11-09T17:05:42.041795" elapsed="0.000131"/>
 </kw>
 <kw name="Get Text" owner="Browser">
 <arg>body</arg>
@@ -69,10 +83,10 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:40.695496" elapsed="0.000135"/>
+<status status="NOT RUN" start="2026-11-09T17:05:42.041992" elapsed="0.000124"/>
 </kw>
-<msg time="2026-11-09T17:02:40.696651" level="INFO">Starting Browser process /Users/andres.aarnela/Desktop/webcounter/.venv/lib/python3.14/site-packages/BrowserBatteries/bin/wrapper/index.js using at 127.0.0.1:54209</msg>
-<status status="PASS" start="2026-11-09T17:02:40.694822" elapsed="0.000884"/>
+<msg time="2026-11-09T17:05:42.043583" level="INFO">Starting Browser process /Users/andres.aarnela/Desktop/webcounter/.venv/lib/python3.14/site-packages/BrowserBatteries/bin/wrapper/index.js using at 127.0.0.1:54251</msg>
+<status status="PASS" start="2026-11-09T17:05:42.041427" elapsed="0.000744"/>
 </test>
 <test id="s1-s1-t2" name="When button pressed twice the counter is two" line="12">
 <kw name="Go To" owner="Browser">
@@ -80,21 +94,21 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.052036" elapsed="0.001483"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.507605" elapsed="0.000645"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>button &gt;&gt; text=Paina</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.053806" elapsed="0.000431"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.508440" elapsed="0.000282"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>button &gt;&gt; text=Paina</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.054403" elapsed="0.000291"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.508820" elapsed="0.000184"/>
 </kw>
 <kw name="Get Text" owner="Browser">
 <arg>body</arg>
@@ -104,17 +118,17 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.054931" elapsed="0.000371"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.509106" elapsed="0.000231"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:42.046909" elapsed="0.008549"/>
+<status status="PASS" start="2026-11-09T17:05:43.504462" elapsed="0.004971"/>
 </test>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.060669" elapsed="0.000454"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.513350" elapsed="0.000865"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:40.608168" elapsed="1.453029"/>
+<status status="PASS" start="2026-11-09T17:05:41.932325" elapsed="1.582018"/>
 </suite>
 <suite id="s1-s2" name="Reset" source="/Users/andres.aarnela/Desktop/webcounter/src/tests/reset.robot">
 <kw name="Open And Configure Browser" owner="resource" type="SETUP">
@@ -126,9 +140,9 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.071921" elapsed="0.000412"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.528344" elapsed="0.000277"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:42.071706" elapsed="0.000696"/>
+<status status="PASS" start="2026-11-09T17:05:43.528204" elapsed="0.000466"/>
 </branch>
 <branch type="ELSE">
 <kw name="New Browser" owner="Browser">
@@ -138,26 +152,40 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.072622" elapsed="0.000324"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.528805" elapsed="0.000171"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:42.072443" elapsed="0.000554"/>
+<status status="PASS" start="2026-11-09T17:05:43.528694" elapsed="0.000312"/>
 </branch>
-<status status="PASS" start="2026-11-09T17:02:42.071681" elapsed="0.001348"/>
+<status status="PASS" start="2026-11-09T17:05:43.528185" elapsed="0.000839"/>
 </if>
 <kw name="New Context" owner="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.073277" elapsed="0.000220"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.529171" elapsed="0.000135"/>
 </kw>
 <kw name="New Page" owner="Browser">
 <arg>about:blank</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.073626" elapsed="0.000252"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.529378" elapsed="0.000475"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:42.071446" elapsed="0.002488"/>
+<kw name="Go To" owner="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.530091" elapsed="0.000417"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>button &gt;&gt; text=Nollaa</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.530698" elapsed="0.000493"/>
+</kw>
+<status status="PASS" start="2026-11-09T17:05:43.527989" elapsed="0.003265"/>
 </kw>
 <test id="s1-s2-t1" name="When counter has a nonzero value and it is reset the value becomes zero" line="7">
 <kw name="Go To" owner="Browser">
@@ -165,21 +193,21 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.076126" elapsed="0.000334"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.534715" elapsed="0.000299"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>button &gt;&gt; text=Paina</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.076595" elapsed="0.000281"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.535105" elapsed="0.000148"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>button &gt;&gt; text=Nollaa</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.077008" elapsed="0.000221"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.535337" elapsed="0.000132"/>
 </kw>
 <kw name="Get Text" owner="Browser">
 <arg>body</arg>
@@ -189,30 +217,138 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.077342" elapsed="0.000228"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.535562" elapsed="0.000176"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:42.073991" elapsed="0.003666"/>
+<status status="PASS" start="2026-11-09T17:05:43.531306" elapsed="0.004500"/>
 </test>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2026-11-09T17:02:42.080318" elapsed="0.000233"/>
+<status status="NOT RUN" start="2026-11-09T17:05:43.537737" elapsed="0.000218"/>
 </kw>
-<status status="PASS" start="2026-11-09T17:02:42.066223" elapsed="0.014371"/>
+<status status="PASS" start="2026-11-09T17:05:43.523055" elapsed="0.014935"/>
 </suite>
-<status status="PASS" start="2026-11-09T17:02:40.591862" elapsed="1.491463"/>
+<suite id="s1-s3" name="Set" source="/Users/andres.aarnela/Desktop/webcounter/src/tests/set.robot">
+<kw name="Open And Configure Browser" owner="resource" type="SETUP">
+<if>
+<branch type="IF" condition="$HEADLESS == 'true'">
+<kw name="New Browser" owner="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.545033" elapsed="0.000236"/>
+</kw>
+<status status="PASS" start="2026-11-09T17:05:43.544914" elapsed="0.000394"/>
+</branch>
+<branch type="ELSE">
+<kw name="New Browser" owner="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=False</arg>
+<arg>slowMo=${DELAY}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.545430" elapsed="0.000160"/>
+</kw>
+<status status="PASS" start="2026-11-09T17:05:43.545330" elapsed="0.000289"/>
+</branch>
+<status status="PASS" start="2026-11-09T17:05:43.544898" elapsed="0.000737"/>
+</if>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.545785" elapsed="0.000119"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>about:blank</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.545970" elapsed="0.000116"/>
+</kw>
+<kw name="Go To" owner="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.546143" elapsed="0.000108"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>button &gt;&gt; text=Nollaa</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.546308" elapsed="0.000108"/>
+</kw>
+<status status="PASS" start="2026-11-09T17:05:43.544795" elapsed="0.001646"/>
+</kw>
+<test id="s1-s3-t1" name="When counter is set to 10 the value is ten" line="7">
+<kw name="Go To" owner="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.547900" elapsed="0.000230"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>button &gt;&gt; text=Paina</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.548208" elapsed="0.000142"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<arg>input[name="value"]</arg>
+<arg>10</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.548413" elapsed="0.000120"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>button &gt;&gt; text=Aseta</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.548599" elapsed="0.000112"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<arg>body</arg>
+<arg>*=</arg>
+<arg>nappia painettu 10 kertaa</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.548777" elapsed="0.000133"/>
+</kw>
+<status status="PASS" start="2026-11-09T17:05:43.546471" elapsed="0.002497"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-11-09T17:05:43.550828" elapsed="0.000207"/>
+</kw>
+<status status="PASS" start="2026-11-09T17:05:43.542306" elapsed="0.008765"/>
+</suite>
+<status status="PASS" start="2026-11-09T17:05:41.916072" elapsed="1.636788"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="3" fail="0" skip="0">Tests</stat>
+<stat name="Tests" id="s1" pass="4" fail="0" skip="0">Tests</stat>
 <stat name="Increment" id="s1-s1" pass="2" fail="0" skip="0">Tests.Increment</stat>
 <stat name="Reset" id="s1-s2" pass="1" fail="0" skip="0">Tests.Reset</stat>
+<stat name="Set" id="s1-s3" pass="1" fail="0" skip="0">Tests.Set</stat>
 </suite>
 </statistics>
 <errors>
